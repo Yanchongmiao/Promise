@@ -5,7 +5,8 @@
   "main": "Propmise",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:ES5": "promises-aplus-tests ES5Propmise.js"
+    "test:ES5": "promises-aplus-tests ES5Propmise.js",
+    "test:ES6": "promises-aplus-tests ES6Propmise.js"
 
   },
   "repository": {

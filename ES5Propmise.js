@@ -165,15 +165,15 @@
   define(proto, "finally", function Finally(callback) {
     var self = this;
     checkInstance(self);
-    return self.then(null, callback);
+    return self.then(callback, callback);
   });
-  define(Promise, "resolve", function Finally(callback) {
+  define(Promise, "resolve", function resolve(callback) {
     return new Promise(async function (resolve) {
       var v = await callback;
       resolve(v);
     });
   });
-  define(Promise, "reject", function Finally(callback) {
+  define(Promise, "reject", function reject(callback) {
     return new Promise(async function (resolve, reject) {
       try {
         var v = await callback;
